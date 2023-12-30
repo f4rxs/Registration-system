@@ -218,7 +218,7 @@ int main()
 					cout << "\n"
 						 << endl;
 
-					coursePtr->displayRegisteredStudents(cout);
+					// coursePtr->displayRegisteredStudents(cout);
 
 					break;
 				}

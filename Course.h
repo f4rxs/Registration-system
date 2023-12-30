@@ -211,7 +211,7 @@ Postcondition: The course title is returned as a string.
 ----------------------------------------------------------------------------*/
 
   /***** Display Registered Students *****/
-  void displayRegisteredStudents(ostream &os);
+  // void displayRegisteredStudents(ostream &os);
   /*---------------------------------------------------------------------------
   Display the list of students registered for the course.
 
@@ -241,17 +241,17 @@ Postcondition: The course title is returned as a string.
                  the course, false otherwise.
 ----------------------------------------------------------------------------*/
 
-/***** Friend Output Stream Operator *****/
+  /***** Friend Output Stream Operator *****/
   friend ostream &operator<<(ostream &os, Course &course);
   /*---------------------------------------------------------------------------
-  Overload the output stream operator to write course information 
+  Overload the output stream operator to write course information
                                               to an output stream.
 
   Precondition:  The 'os' parameter is a valid output stream. The 'course'
                  parameter is a valid Course object.
   Postcondition: Course information is written to the output stream.
 ----------------------------------------------------------------------------*/
-  
+
   /***** Friend Input Stream Operator *****/
   friend istream &operator>>(istream &is, const Course &course);
   /*---------------------------------------------------------------------------
@@ -263,9 +263,10 @@ Postcondition: The course title is returned as a string.
   Postcondition: Reads course information from the input stream and populates
                  the 'course' object.
 ----------------------------------------------------------------------------*/
- 
- /***** Equality Operator *****/
-  bool operator==(const Course &course) const;
+
+  /***** Equality Operator *****/
+   bool operator==( const string &courseId);
+
   /*---------------------------------------------------------------------------
   Compare two courses for equality.
 
@@ -275,13 +276,12 @@ Postcondition: The course title is returned as a string.
 ----------------------------------------------------------------------------*/
 
 private:
-  string code;      // code of the course
-  string title;     // title of the course
-  int numOfCredits; // credits number of the course
-  int capacity;     // capacity of the course
-  DoublyLinkedList<Student> registeredStudents;/**Course's list of registered 
-                                                            students*/
-                                                 
+  string code;                                 // code of the course
+  string title;                                // title of the course
+  int numOfCredits;                            // credits number of the course
+  int capacity;                                // capacity of the course
+  DoublyLinkedList<string> registerStudentIDs; /**Course's list of registered
+                                                             students*/
 };
 
-#endif    //END OF THE HEADER FILE
+#endif // END OF THE HEADER FILE

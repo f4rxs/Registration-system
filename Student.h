@@ -38,225 +38,225 @@ using namespace std;
 // enum for the student's academic result
 enum AcademicStatus
 {
-    REGULAR,
-    PROBATION
+  REGULAR,
+  PROBATION
 };
 
 class Course; // forward class course
 class Student
 {
 public:
-    /******** Function Members ********/
+  /******** Function Members ********/
 
-    /**********class constructor**************/
-    Student(const string &studentID,
-            const string &firstName,
-            const string &lastName, double gpa);
-    /*-------------------------------------------------------------------------
+  /**********class constructor**************/
+  Student(const string &studentID,
+          const string &firstName,
+          const string &lastName, double gpa);
+  /*-------------------------------------------------------------------------
 Construct a Student object.
 
 Precondition:  studentID is a string of 8 characters starting with 'A' followed
-                 by 7 digits, firstName and lastName are non-empty strings, and
-                 gpa is a floating-point number in the range [0, 4].
+               by 7 digits, firstName and lastName are non-empty strings, and
+               gpa is a floating-point number in the range [0, 4].
 
- Postcondition: A Student object is created with the specified studentID,
-                 firstName, lastName, and GPA.
+Postcondition: A Student object is created with the specified studentID,
+               firstName, lastName, and GPA.
 ----------------------------------------------------------------------------*/
 
-    /***** Default Constructor *****/
-    Student();
-    /*-------------------------------------------------------------------------
-  Construct a Student object with default values.
+  /***** Default Constructor *****/
+  Student();
+  /*-------------------------------------------------------------------------
+Construct a Student object with default values.
 
-  Precondition:  None.
-  Postcondition: An empty Student object is constructed with default values for
-                 studentID, firstName, lastName, and GPA.
+Precondition:  None.
+Postcondition: An empty Student object is constructed with default values for
+               studentID, firstName, lastName, and GPA.
 ----------------------------------------------------------------------------*/
 
-   /***** Accessors *****/
-    string getID() const;
-    /*---------------------------------------------------------------------
+  /***** Accessors *****/
+  string getID() const;
+  /*---------------------------------------------------------------------
 Retrieve the student's unique identifier (ID).
 
 Precondition:  None.
 Postcondition: The student's ID is returned as a string.
 ----------------------------------------------------------------------------*/
-    string getFirstName() const;
-    /*------------------------------------------------------------------------
- Retrieve the student's first name.
+  string getFirstName() const;
+  /*------------------------------------------------------------------------
+Retrieve the student's first name.
 
- Precondition:  None.
- Postcondition: The student's first name is returned as a string.
+Precondition:  None.
+Postcondition: The student's first name is returned as a string.
 ----------------------------------------------------------------------------*/
-    string getLastName() const;
-    /*------------------------------------------------------------------------
- Retrieve the student's last name.
+  string getLastName() const;
+  /*------------------------------------------------------------------------
+Retrieve the student's last name.
 
- Precondition:  None.
- Postcondition: The student's last name is returned as a string.
+Precondition:  None.
+Postcondition: The student's last name is returned as a string.
 ----------------------------------------------------------------------------*/
-    double getGpa() const;
-    /*------------------------------------------------------------------------
- Retrieve the student's grade point average (GPA).
+  double getGpa() const;
+  /*------------------------------------------------------------------------
+Retrieve the student's grade point average (GPA).
 
- Precondition:  None.
- Postcondition: The student's GPA is returned as a floating-point number.
+Precondition:  None.
+Postcondition: The student's GPA is returned as a floating-point number.
 ----------------------------------------------------------------------------*/
-    string getMajor() const;
-    /*------------------------------------------------------------------------
-  Retrieve the student's major.
+  string getMajor() const;
+  /*------------------------------------------------------------------------
+Retrieve the student's major.
 
-  Precondition:  None.
-  Postcondition: The student's major is returned as a string.
+Precondition:  None.
+Postcondition: The student's major is returned as a string.
 ----------------------------------------------------------------------------*/
-    AcademicStatus getAcademicStatus() const;
-    /*------------------------------------------------------------------------
-  Retrieve the student's academic status.
+  AcademicStatus getAcademicStatus() const;
+  /*------------------------------------------------------------------------
+Retrieve the student's academic status.
 
-  Precondition:  None.
-  Postcondition: The student's academic status is returned as an
-                 AcademicStatus enum value.
+Precondition:  None.
+Postcondition: The student's academic status is returned as an
+               AcademicStatus enum value.
 ----------------------------------------------------------------------------*/
-    int getSize() const;
-    /*------------------------------------------------------------------------
-  Retrieve the size of the student data.
+  int getSize() const;
+  /*------------------------------------------------------------------------
+Retrieve the size of the student data.
 
-  Precondition:  None.
-  Postcondition: The size of the student data is returned as an integer.
+Precondition:  None.
+Postcondition: The size of the student data is returned as an integer.
 ----------------------------------------------------------------------------*/
 
-    // Mutators*
-    void setID(const string &id);
-    /*--------------------------------------------------------------------
+  // Mutators*
+  void setID(const string &id);
+  /*--------------------------------------------------------------------
 Set the student's unique identifier (ID).
 
 Precondition:  The 'id' parameter is a string of 8 characters starting
-               with 'A' followed by 7 digits.
+             with 'A' followed by 7 digits.
 Postcondition: The student's ID is updated to the specified value.
 ------------------------------------------------------------------------*/
-    void setFirstName(const string &first);
-    /*------------------------------------------------------------------------
- Set the student's first name.
+  void setFirstName(const string &first);
+  /*------------------------------------------------------------------------
+Set the student's first name.
 
- Precondition:  The 'first' parameter is a non-empty string.
- Postcondition: The student's first name is updated to the specified value.
+Precondition:  The 'first' parameter is a non-empty string.
+Postcondition: The student's first name is updated to the specified value.
 ----------------------------------------------------------------------------*/
-    void setLastName(const string &last);
-    /*-----------------------------------------------------------------------
-  Set the student's last name.
+  void setLastName(const string &last);
+  /*-----------------------------------------------------------------------
+Set the student's last name.
 
-  Precondition:  The 'last' parameter is a non-empty string.
-  Postcondition: The student's last name is updated to the specified value.
+Precondition:  The 'last' parameter is a non-empty string.
+Postcondition: The student's last name is updated to the specified value.
 ----------------------------------------------------------------------------*/
-    void setGpa(const double &gpa);
-    /*-----------------------------------------------------------------------
-  Set the student's grade point average (GPA).
+  void setGpa(const double &gpa);
+  /*-----------------------------------------------------------------------
+Set the student's grade point average (GPA).
 
-  Precondition:  The 'gpa' parameter is a double number in the range
-                 [0, 4].
-  Postcondition: The student's GPA is updated to the specified value.
+Precondition:  The 'gpa' parameter is a double number in the range
+               [0, 4].
+Postcondition: The student's GPA is updated to the specified value.
 ----------------------------------------------------------------------------*/
-    void setMajor(const string &major);
-    /*------------------------------------------------------------------------
-  Set the student's major.
+  void setMajor(const string &major);
+  /*------------------------------------------------------------------------
+Set the student's major.
 
-  Precondition:  The 'major' parameter is a non-empty string.
-  Postcondition: The student's major is updated to the specified value.
+Precondition:  The 'major' parameter is a non-empty string.
+Postcondition: The student's major is updated to the specified value.
 -----------------------------------------------------------------------------*/
 
-    /***** Register Course *****/
-    void registerCourse(const Course &Course);
-    /*-----------------------------------------------------------------------
-  Register the student for a course.
+  /***** Register Course *****/
+  void registerCourse(const Course &Course);
+  /*-----------------------------------------------------------------------
+Register the student for a course.
 
-  Precondition:  The 'Course' parameter is a valid Course object.
-  Postcondition: The student is registered for the specified course.
+Precondition:  The 'Course' parameter is a valid Course object.
+Postcondition: The student is registered for the specified course.
 ----------------------------------------------------------------------------*/
 
-    /***** Drop from Course *****/
-    void dropFromCourse(const Course &Course);
-    /*------------------------------------------------------------------------
-  Drop the student from a course.
+  /***** Drop from Course *****/
+  void dropFromCourse(const Course &Course);
+  /*------------------------------------------------------------------------
+Drop the student from a course.
 
-  Precondition:  The 'Course' parameter is a valid Course object.
-  Postcondition: The student is dropped from the specified course.
+Precondition:  The 'Course' parameter is a valid Course object.
+Postcondition: The student is dropped from the specified course.
 ----------------------------------------------------------------------------*/
-    /***** Display Registered Courses *****/
-    void displayRegisterdCourses(ostream &os);
-    /*-------------------------------------------------------------------
+  /***** Display Registered Courses *****/
+  void displayRegisterdCourses(ostream &os);
+  /*-------------------------------------------------------------------
 Display the list of courses registered by the student.
 
 Precondition:  The 'os' parameter is a valid output stream.
 Postcondition: The list of registered courses is displayed on the output
-             stream.
+           stream.
 ---------------------------------------------------------------------------*/
 
-    /***** Display Student *****/
-    void displayStudent(ostream &os) const;
-    /*---------------------------------------------------------------------
+  /***** Display Student *****/
+  void displayStudent(ostream &os) const;
+  /*---------------------------------------------------------------------
 Display detailed information about the student.
 
 Precondition:  The 'os' parameter is a valid output stream.
 Postcondition: The student's information is displayed on the output stream.
 ----------------------------------------------------------------------------*/
 
-    /***** Display Info *****/
-    void displayInfo(ostream &os) const;
-    /*-------------------------------------------------------------------------
-  Display basic information about the student.
+  /***** Display Info *****/
+  void displayInfo(ostream &os) const;
+  /*-------------------------------------------------------------------------
+Display basic information about the student.
 
-  Precondition:  The 'os' parameter is a valid output stream.
-  Postcondition: The student's basic information is displayed on the output
-                 stream.
+Precondition:  The 'os' parameter is a valid output stream.
+Postcondition: The student's basic information is displayed on the output
+               stream.
 ----------------------------------------------------------------------------*/
 
-    /***** Equality Operator *****/
-    bool operator==(const Student &student);
-    /*------------------------------------------------------------------------
-  Compare two students for equality.
+  /***** Equality Operator *****/
+  bool operator==(const string &studentID);
+  /*------------------------------------------------------------------------
+Compare two students for equality.
 
-  Precondition:  The 'student' parameter is a valid Student object.
-  Postcondition: Returns true if the students have the same attributes, false
-                otherwise.
+Precondition:  The 'student' parameter is a valid Student object.
+Postcondition: Returns true if the students have the same attributes, false
+              otherwise.
 ----------------------------------------------------------------------------*/
 
-    /***** Input Stream Operator *****/
-    friend istream &operator>>(istream &is, Student &student);
-    /*------------------------------------------------------------------------
-  Overload the input stream operator to read a Student object from an
-    input stream.
+  /***** Input Stream Operator *****/
+  friend istream &operator>>(istream &is, Student &student);
+  /*------------------------------------------------------------------------
+Overload the input stream operator to read a Student object from an
+  input stream.
 
-  Precondition:  The 'is' parameter is a valid input stream. The 'student'
-                 parameter is a valid Student object.
-  Postcondition: Reads student data from the input stream and populates the
-                                                            'student' object.
+Precondition:  The 'is' parameter is a valid input stream. The 'student'
+               parameter is a valid Student object.
+Postcondition: Reads student data from the input stream and populates the
+                                                          'student' object.
 ----------------------------------------------------------------------------*/
 
-    /***** Output Stream Operator *****/
-    friend ostream &operator<<(ostream &os, const Student &student);
-    /*---------------------------------------------------------------------
+  /***** Output Stream Operator *****/
+  friend ostream &operator<<(ostream &os, const Student &student);
+  /*---------------------------------------------------------------------
 Overload the output stream operator to write a Student object to an output
-     stream.
+   stream.
 
 Precondition:  The 'os' parameter is a valid output stream. The 'student'
-              parameter is a valid Student object.
+            parameter is a valid Student object.
 Postcondition: Writes student information to the output stream.
 -----------------------------------------------------------------------------*/
 
-    /***** Data Members *****/
+  /***** Data Members *****/
 private:
-    string studentID;                            // ID of the student
-    string firstName;                            // first name of the student
-    string lastName;                             // last name of the student
-    double gpa;                                  // gpa of the student
-    string major;                                // major of the student
-    AcademicStatus academicStatus;               // student's academic status
-    LListWithDummyNode<Course> registerdCourses; // student's registerdCourses
+  string studentID;                               // ID of the student
+  string firstName;                               // first name of the student
+  string lastName;                                // last name of the student
+  double gpa;                                     // gpa of the student
+  string major;                                   // major of the student
+  AcademicStatus academicStatus;                  // student's academic status
+  LListWithDummyNode<string> registerdCoursesIDs; // student's registerdCourses
 
-    /***** Update Academic Status *****/
-    void updateAcademicStatus();
+  /***** Update Academic Status *****/
+  void updateAcademicStatus();
 
-    /*----------------------------------------------------------------------
+  /*----------------------------------------------------------------------
 Update the student's academic status based on their GPA and other criteria.
 
 Precondition:  This is a private function used internally by the class.

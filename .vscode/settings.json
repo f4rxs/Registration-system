@@ -3,6 +3,7 @@
         "xstring": "cpp",
         "iosfwd": "cpp",
         "iostream": "cpp",
-        "cctype": "cpp"
+        "cctype": "cpp",
+        "system_error": "cpp"
     }
 }
